@@ -12,6 +12,7 @@ export interface IHLSPlayer {
 class HLSPlayer implements IHLSPlayer {
     private position: number
     private speed: number
+    private progress: any
     constructor() {
 
     }
@@ -19,18 +20,21 @@ class HLSPlayer implements IHLSPlayer {
     public start(): boolean  {
         this.increment()
         this.speed = 1
+        this.position = 1
         return true
     }
 
     stop(): boolean {
+        clearTimeout(this.progress)
         return true
     }
 
     getPosition(): number {
-        return 0;
+        return this.position;
     }
 
     setPosition(position: number): number {
+        this.position = position
         return position;
     }
 
@@ -44,8 +48,9 @@ class HLSPlayer implements IHLSPlayer {
     }
 
     increment(): any {
-        setTimeout(()=> {
+        this.progress = setTimeout(()=> {
             this.position++
+            console.log(this.position);
             this.increment()
         }, 1000)
     }

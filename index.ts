@@ -35,11 +35,11 @@ export class NBCPlayer {
     }
 
     skipForward(): number {
-        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() + 30)
+        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() + 5)
     }
 
     skipBackward(): number {
-        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() - 30)
+        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() - 5)
     }
 
     fastForward(): any {

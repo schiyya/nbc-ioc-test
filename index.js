@@ -24,10 +24,10 @@ var NBCPlayer = /** @class */ (function () {
         return this.hlsPlayer.getPosition();
     };
     NBCPlayer.prototype.skipForward = function () {
-        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() + 30);
+        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() + 5);
     };
     NBCPlayer.prototype.skipBackward = function () {
-        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() - 30);
+        return this.hlsPlayer.setPosition(this.hlsPlayer.getPosition() - 5);
     };
     NBCPlayer.prototype.fastForward = function () {
         this.hlsPlayer.setSpeed(this.hlsPlayer.getSpeed() + 1);
