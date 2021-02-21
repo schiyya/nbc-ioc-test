@@ -1,4 +1,4 @@
-
+/** HLS Player Interface implemented by HLS Class */
 export interface IHLSPlayer {
     start(): boolean
     stop(): any
@@ -9,6 +9,7 @@ export interface IHLSPlayer {
 }
 
 
+/** Main HLS LIB that has all implemetations and methods in details */
 class HLSPlayer implements IHLSPlayer {
     private position: number
     private speed: number

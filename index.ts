@@ -1,5 +1,7 @@
 import { IHLSPlayer } from './lib/hlsPlayer';
 
+/**NBC Player using hlsPlayer interface as injectable player object */
+/** NBC Player can have its own features and implemetations */
 
 export class NBCPlayer {
     private hlsPlayer: IHLSPlayer

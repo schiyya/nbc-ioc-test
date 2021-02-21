@@ -1,6 +1,10 @@
 import { NBCPlayer } from './index';
 import { IHLSPlayer } from './lib/hlsPlayer';
 
+
+/* Used Mock Player implementation to test */
+
+
 class mockPlayer implements IHLSPlayer {
     private position: number
     private speed: number
@@ -48,11 +52,20 @@ class mockPlayer implements IHLSPlayer {
     }
 }
 
+
+
+
+// Created a sample player passing mockplayer as object rather than injecting an interface from container. 
+// Initial version of IOC as example
+
 const ironMan  = new NBCPlayer(new mockPlayer, 'IronMan', 180000, 0)
 
 ironMan.initiatePlayer()
 console.log(ironMan.getPlayerDuration())
 
+
+//************************************ */
+/** Write sample test cases here to test player implementation */
 setTimeout(()=> {
     console.log(ironMan.getProgressbar())
     ironMan.skipForward()
